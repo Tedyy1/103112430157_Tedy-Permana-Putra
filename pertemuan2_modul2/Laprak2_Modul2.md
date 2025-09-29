@@ -327,7 +327,7 @@ int main() {
 ### Output Unguided 2_1 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan1_modul1/output1-unguided2-modul2.png)
+![Screenshot Output Unguided 2_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan2_modul2/output1-unguided2_1-modul2.png)
 
 Program ini memperlihatkan penggunaan pointer untuk mengakses alamat serta nilai variabel, lalu mendemonstrasikan fungsi tukar dan tukar3 yang menggunakan pointer untuk menukar isi dua maupun tiga variabel sekaligus, kemudian menampilkan hasilnya ke layar.
 
@@ -373,7 +373,7 @@ int main() {
 ### Output Unguided 2.2 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_2](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan1_modul1/output1-unguided2_2-modul2.png)
+![Screenshot Output Unguided 2_2](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan2_modul2/output1-unguided2_2-modul2.png)
 
 Program ini menampilkan cara kerja reference sebagai alias variabel, bagaimana perubahan melalui reference memengaruhi nilai asli, serta penggunaan fungsi Tukar dan Tukar3 dengan parameter referensi untuk menukar isi dua maupun tiga variabel sekaligus.
 
@@ -467,10 +467,10 @@ int main() {
 ### Output Unguided 3 :
 
 ##### Output 1
-![Screenshot Output Unguided 3_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan1_modul1/output1-unguided3_1-modul2.png)
+![Screenshot Output Unguided 3_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan2_modul2/output1-unguided3_1-modul2.png)
 
 ##### Output 2
-![Screenshot Output Unguided 3_2](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan1_modul1/output1-unguided3_2-modul2.png)
+![Screenshot Output Unguided 3_2](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan2_modul2/output1-unguided3_2-modul2.png)
 
 Program ini menggunakan menu interaktif untuk memungkinkan user menampilkan isi array, mencari nilai maksimum, minimum, menghitung rata-rata elemen, dan keluar dari program dengan struktur fungsi terpisah untuk tiap operasi.
 
