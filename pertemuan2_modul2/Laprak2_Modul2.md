@@ -327,7 +327,7 @@ int main() {
 ### Output Unguided 2_1 :
 
 ##### Output 1
-![Screenshot Output Unguided 2_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan1_modul1/output1-unguided2_1-modul2.png)
+![Screenshot Output Unguided 2_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan1_modul1/output1-unguided2-modul2.png)
 
 Program ini memperlihatkan penggunaan pointer untuk mengakses alamat serta nilai variabel, lalu mendemonstrasikan fungsi tukar dan tukar3 yang menggunakan pointer untuk menukar isi dua maupun tiga variabel sekaligus, kemudian menampilkan hasilnya ke layar.
 
