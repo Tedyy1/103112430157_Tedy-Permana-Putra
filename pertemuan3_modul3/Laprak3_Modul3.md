@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 1 - ABSTRACT DATA TYPE (ADT) </h1>
+# <h1 align="center">Laporan Praktikum Modul 3 - ABSTRACT DATA TYPE (ADT) </h1>
 <p align="center">Tedy Permana Putra - 103112430157</p>
 
 ## Dasar Teori
