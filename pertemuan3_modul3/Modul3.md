@@ -81,6 +81,8 @@ Program ini menggunakan struct untuk menyimpan data mahasiswa berupa nama dan du
 ### 2. Program Manajemen Data Pelajaran
 
 ```C++
+[main.cpp]
+
 #include <iostream>
 #include "pelajaran.h"
 using namespace std;
@@ -94,8 +96,42 @@ int main() {
 
     return 0;
 }
+
+[pelajaran.cpp]
+
+#include "pelajaran.h"
+
+pelajaran create_pelajaran(string namaMapel, string kodepel) {
+    pelajaran p;
+    p.namaMapel = namaMapel;
+    p.kodeMapel = kodepel;
+    return p;
+}
+
+void tampil_pelajaran(pelajaran pel) {
+    cout << "Nama Pelajaran : " << pel.namaMapel << endl;
+    cout << "kode : " << pel.kodeMapel << endl;
+}
+
+[pelajaran.h]
+#ifndef PELAJARAN_H
+#define PELAJARAN_H
+
+#include <iostream>
+using namespace std;
+
+struct pelajaran {
+    string namaMapel;
+    string kodeMapel;
+};
+
+pelajaran create_pelajaran(string namaMapel, string kodepel);
+
+void tampil_pelajaran(pelajaran pel);
+
+#endif
 ```
-Program ini terdiri dari tiga file — pelajaran.h, pelajaran.cpp, dan main.cpp — yang bekerja bersama untuk membuat dan menampilkan informasi tentang pelajaran menggunakan struktur data dan fungsi terpisah.
+Program C++ ini terdiri dari tiga berkas terpisah — main.cpp, pelajaran.cpp, dan pelajaran.h — yang bekerja sama untuk membuat dan menampilkan data sebuah pelajaran. File header pelajaran.h berisi definisi struktur pelajaran dengan dua atribut (namaMapel dan kodeMapel) serta deklarasi fungsi create_pelajaran() dan tampil_pelajaran(). Implementasi kedua fungsi tersebut ada di pelajaran.cpp: fungsi create_pelajaran() membuat objek pelajaran baru berdasarkan nama dan kode yang diberikan, sedangkan tampil_pelajaran() mencetak informasi pelajaran ke layar. Dalam main.cpp, program utama membuat objek pelajaran “Struktur Data” dengan kode “STD”, lalu menampilkannya menggunakan fungsi-fungsi tersebut, menunjukkan konsep modularisasi dan penggunaan header dalam C++.
 
 ## Unguided 
 
@@ -234,7 +270,7 @@ void tampil_pelajaran(pelajaran pel);
 ##### Output 1
 ![Screenshot Output Unguided 2_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan3_modul3/output1-unguided2-modul3.png)
 
-penjelasan unguided 2
+Program C++ ini terdiri dari tiga berkas terpisah — main.cpp, pelajaran.cpp, dan pelajaran.h — yang bekerja sama untuk membuat dan menampilkan data sebuah pelajaran. File header pelajaran.h berisi definisi struktur pelajaran dengan dua atribut (namaMapel dan kodeMapel) serta deklarasi fungsi create_pelajaran() dan tampil_pelajaran(). Implementasi kedua fungsi tersebut ada di pelajaran.cpp: fungsi create_pelajaran() membuat objek pelajaran baru berdasarkan nama dan kode yang diberikan, sedangkan tampil_pelajaran() mencetak informasi pelajaran ke layar. Dalam main.cpp, program utama membuat objek pelajaran “Struktur Data” dengan kode “STD”, lalu menampilkannya menggunakan fungsi-fungsi tersebut, menunjukkan konsep modularisasi dan penggunaan header dalam C++.
 
 ### 3. Buatlah program dengan ketentuan :
 - 2 buah array 2D integer berukuran 3x3 dan 2 buah pointer integer
