@@ -606,7 +606,7 @@ int main() {
 
 Kode ini merupakan implementasi singly linked list sederhana yang menyimpan data bertipe int. File singlylist.h mendefinisikan struktur node (ElmList) dan list (List) serta deklarasi fungsi dasar seperti createList, alokasi, insertFirst, dan printInfo. File singlylist.cpp berisi implementasinya, di mana list dibuat kosong, node baru dialokasikan secara dinamis, dan elemen baru selalu disisipkan di awal list. Pada main.cpp, program membuat lima node dengan nilai berbeda, menambahkannya ke dalam list menggunakan insertFirst, lalu mencetak seluruh isi list. Program ini menggambarkan konsep dasar pembuatan, penyisipan, dan traversal pada singly linked list.
 
-### 2. ![Screenshot Soal Unguided 2_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan4_modul4/unguided1-modul4.png)
+### 2. ![Screenshot Soal Unguided 2_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan4_modul4/unguided2-modul4.png)
 
 ```C++ 
 [Singlylist.h]
