@@ -2,167 +2,78 @@
 #include <string>
 using namespace std;
 
-struct Akun {
-    string username;
-    string password;
+struct Queue {
+    static const int MAX = 10;
+    string data[MAX];
+    int front, rear;
 };
 
-struct ElmList {
-    Akun info;
-    ElmList *prev;
-    ElmList *next;
-};
-
-typedef ElmList* address;
-
-struct List {
-    address first;
-    address last;
-};
-
-void createList(List &L) {
-    L.first = NULL;
-    L.last = NULL;
+void createQueue(Queue &Q) {
+    Q.front = -1;
+    Q.rear = -1;
 }
 
-address createNewElm(Akun akun) {
-    address p = new ElmList;
-    if (p != NULL) {
-        p->info = akun;
-        p->prev = NULL;
-        p->next = NULL;
-    }
-    return p;
+bool isEmpty(Queue Q) {
+    return (Q.front == -1);
 }
 
-void insertLast(address p, List &L) {
-    if (L.first == NULL) { 
-        L.first = p;
-        L.last = p;
+bool isFull(Queue Q) {
+    return (Q.rear == Queue::MAX - 1);
+}
+
+void enqueue(Queue &Q, string value) {
+    if (isFull(Q)) {
+        cout << "Queue penuh.\n";
     } else {
-        L.last->next = p;
-        p->prev = L.last;
-        L.last = p;
+        if (isEmpty(Q)) {
+            Q.front = 0;
+        }
+        Q.rear++;
+        Q.data[Q.rear] = value;
+        cout << value << " dimasukkan ke queue.\n";
     }
 }
 
-address findAkun(string username, List L) {
-    address p = L.first;
-    while (p != NULL) {
-        if (p->info.username == username)
-            return p;
-        p = p->next;
-    }
-    return NULL;
-}
-
-void signUp(Akun akun, List &L) {
-    if (findAkun(akun.username, L) != NULL) {
-        cout << "Account has been registered." << endl;
+void dequeue(Queue &Q, string &value) {
+    if (isEmpty(Q)) {
+        cout << "Queue kosong.\n";
     } else {
-        address p = createNewElm(akun);
-        insertLast(p, L);
-        cout << "Account registered successfully." << endl;
+        value = Q.data[Q.front];
+        cout << value << " dikeluarkan dari queue.\n";
+        if (Q.front == Q.rear) {
+            Q.front = Q.rear = -1; 
+        } else {
+            Q.front++;
+        }
     }
 }
 
-void deleteFirst(List &L, address &p) {
-    if (L.first == NULL) {
-        p = NULL;
-        return;
-    }
-
-    p = L.first;
-    if (L.first == L.last) { 
-        L.first = NULL;
-        L.last = NULL;
+void tampilQueue(Queue Q) {
+    cout << "\nIsi Queue:\n";
+    if (isEmpty(Q)) {
+        cout << "Queue kosong.\n";
     } else {
-        L.first = p->next;
-        L.first->prev = NULL;
-        p->next = NULL;
+        for (int i = Q.front; i <= Q.rear; i++) {
+            cout << Q.data[i] << " ";
+        }
+        cout << endl;
     }
-}
-
-void deleteAfter(address q, address &p) {
-    if (q == NULL || q->next == NULL) {
-        p = NULL;
-        return;
-    }
-
-    p = q->next;
-    q->next = p->next;
-    if (p->next != NULL) {
-        p->next->prev = q;
-    }
-    p->next = NULL;
-    p->prev = NULL;
-}
-
-void deleteLast(List &L, address &p) {
-    if (L.last == NULL) {
-        p = NULL;
-        return;
-    }
-
-    p = L.last;
-    if (L.first == L.last) {
-        L.first = NULL;
-        L.last = NULL;
-    } else {
-        L.last = p->prev;
-        L.last->next = NULL;
-        p->prev = NULL;
-    }
-}
-
-void removeAkun(string username, List &L) {
-    address target = findAkun(username, L);
-    if (target == NULL) {
-        cout << "Account not found." << endl;
-        return;
-    }
-
-    address p;
-    if (target == L.first) {
-        deleteFirst(L, p);
-    } else if (target == L.last) {
-        deleteLast(L, p);
-    } else {
-        deleteAfter(target->prev, p);
-    }
-
-    cout << "Account deleted: " << username << endl;
-    delete p;
-}
-
-void showAll(List L) {
-    address p = L.first;
-    cout << "\n=== LIST AKUN ===\n";
-    while (p != NULL) {
-        cout << "Username: " << p->info.username
-             << ", Password: " << p->info.password << endl;
-        p = p->next;
-    }
-    cout << "==================\n";
 }
 
 int main() {
-    List L;
-    createList(L);
+    Queue Q;
+    createQueue(Q);
 
-    Akun a1 = {"user1", "password"};
-    Akun a2 = {"userAbc", "123abc"};
-    Akun a3 = {"xyz", "001pqr"};
+    enqueue(Q, "Andi");
+    enqueue(Q, "Budi");
+    enqueue(Q, "Citra");
 
-    signUp(a1, L);
-    signUp(a2, L);
-    signUp(a3, L);
-    signUp(a2, L);
+    tampilQueue(Q);
 
-    showAll(L);
+    string keluar;
+    dequeue(Q, keluar);
 
-    removeAkun("userAbc", L);
-    showAll(L);
+    tampilQueue(Q);
 
     return 0;
 }
