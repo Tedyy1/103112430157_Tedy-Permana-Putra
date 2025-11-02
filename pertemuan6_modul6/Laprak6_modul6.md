@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 5 - DOUBLY LINKED LIST (BAGIAN PERTAMA) </h1>
+# <h1 align="center">Laporan Praktikum Modul 6 - DOUBLY LINKED LIST (BAGIAN PERTAMA) </h1>
 <p align="center">Tedy Permana Putra - 103112430157</p>
 
 ## Dasar Teori
