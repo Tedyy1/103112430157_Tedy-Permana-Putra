@@ -1,4 +1,6 @@
 #include "StackMahasiswa.h"
+#include <iostream>
+using namespace std;
 
 bool isEmpty(StackMahasiswa S) {
     return S.top == -1;

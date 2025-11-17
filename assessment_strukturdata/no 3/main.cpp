@@ -1,4 +1,6 @@
 #include "StackMahasiswa.h"
+#include <iostream>
+using namespace std;
 
 void maxNilaiAkhir(StackMahasiswa S) {
     if (isEmpty(S)) {
