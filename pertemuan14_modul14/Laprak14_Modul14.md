@@ -382,7 +382,7 @@ int main() {
 ### 1. ![Screenshot Unguided 1_1](https://github.com/Tedyy1/103112430157_Tedy-Permana-Putra/blob/main/pertemuan14_modul14/unguided1-modul14.png)
 
 
-#### [MultiLL.h]
+#### [graph.h]
 ```C++
 #ifndef GRAPH_H
 #define GRAPH_H
@@ -423,7 +423,7 @@ void PrintInfoGraph(Graph graph);
 #endif
 ```
 
-#### [MultiLL.cpp]
+#### [graph.cpp]
 ```C++
 #include "graph.h"
 #include <iostream>
@@ -541,7 +541,7 @@ Kode ini mengimplementasikan struktur data graph tak berarah (undirected graph) 
 
 ### 2. Buatlah prosedur untuk menampilkanhasil penelusuran DFS. prosedur PrintDFS (Graph G, adrNode N);prosedur PrintDFS (Graph G, adrNode N);
 
-#### [MultiLL.h]
+#### [graph.h]
 ```C++
 #ifndef GRAPH_H
 #define GRAPH_H
@@ -584,7 +584,7 @@ void PrintDFS(Graph &graph, addressNode node);
 #endif
 ```
 
-#### [MultiLL.cpp] 
+#### [graph.cpp] 
 ```C++
 #include "graph.h"
 #include <iostream>
